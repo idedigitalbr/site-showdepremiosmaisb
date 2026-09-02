@@ -1,0 +1,23 @@
+name: showdepremiosmaisb
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: showdepremiosmaisb-web
+    restart: always
+    networks:
+      - default
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.showdepremiosmaisb-router.rule=Host(`showdepremiosmaisb.suporteide.digital`)"
+      - "traefik.http.routers.showdepremiosmaisb-router.entrypoints=websecure"
+      - "traefik.http.routers.showdepremiosmaisb-router.tls=true"
+      - "traefik.http.routers.showdepremiosmaisb-router.tls.certresolver=letsencrypt"
+      - "traefik.http.services.showdepremiosmaisb-service.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
