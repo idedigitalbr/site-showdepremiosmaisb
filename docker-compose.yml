@@ -12,10 +12,17 @@ services:
       - proxy
     labels:
       - "traefik.enable=true"
+      # Router - suporteide.digital
       - "traefik.http.routers.showdepremiosmaisb-router.rule=Host(`showdepremiosmaisb.suporteide.digital`)"
       - "traefik.http.routers.showdepremiosmaisb-router.entrypoints=websecure"
       - "traefik.http.routers.showdepremiosmaisb-router.tls=true"
       - "traefik.http.routers.showdepremiosmaisb-router.tls.certresolver=letsencrypt"
+      # Router - domínio oficial .com.br
+      - "traefik.http.routers.showdepremiosmaisb-oficial.rule=Host(`showdepremiosmaisb.com.br`)"
+      - "traefik.http.routers.showdepremiosmaisb-oficial.entrypoints=websecure"
+      - "traefik.http.routers.showdepremiosmaisb-oficial.tls=true"
+      - "traefik.http.routers.showdepremiosmaisb-oficial.tls.certresolver=letsencrypt"
+      # Serviço compartilhado
       - "traefik.http.services.showdepremiosmaisb-service.loadbalancer.server.port=80"
 
 networks:
