@@ -1,0 +1,616 @@
+/* ==========================================================================
+   PÁGINA LEGAL: POLÍTICA DE PRIVACIDADE & TERMOS DE USO
+   Supermercados Mais B — Show de Prêmios (2026)
+   Tema Oficial: Fundo Geral Dark Premium com CONTAINER CENTRAL BRANCO (#FFFFFF)
+   ========================================================================== */
+
+/* ── Estrutura Geral da Página (Mantém o Fundo Dark Oficial) ── */
+.legal-page {
+  background: var(--bg-gradient, radial-gradient(circle at 12% 0%, rgba(254, 186, 102, 0.12), transparent 38%), radial-gradient(circle at 88% 14%, rgba(200, 11, 13, 0.08), transparent 28%), #050505);
+  min-height: 100vh;
+  color: #e5e5e5;
+  font-family: var(--font-sans);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ── Hero Legal (Dark Premium com Brilho Dourado) ── */
+.legal-hero {
+  padding: 56px 0 36px;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid var(--line, rgba(255, 255, 255, 0.12));
+  background: radial-gradient(circle at 50% -20%, rgba(254, 186, 102, 0.15), transparent 70%);
+}
+
+.legal-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--muted, #8c8273);
+  margin-bottom: 18px;
+}
+
+.legal-breadcrumbs a {
+  color: var(--muted, #8c8273);
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legal-breadcrumbs a:hover {
+  color: var(--gold, #FEBA66);
+}
+
+.legal-breadcrumbs .separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.legal-breadcrumbs .current {
+  color: var(--gold-light, #FFD49A);
+  font-weight: 500;
+}
+
+.legal-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: var(--r-full, 9999px);
+  background: rgba(254, 186, 102, 0.1);
+  border: 1px solid rgba(254, 186, 102, 0.3);
+  color: var(--gold, #FEBA66);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(254, 186, 102, 0.1);
+}
+
+.legal-hero-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.legal-hero-title span {
+  color: var(--gold, #FEBA66);
+}
+
+.legal-hero-desc {
+  max-width: 680px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #b0aba2;
+}
+
+/* ── Meta Info Bar (Data, Leitura, Ação de Imprimir) ── */
+.legal-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  font-size: 0.82rem;
+  color: #8c8273;
+  margin-top: 10px;
+}
+
+.legal-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legal-meta-item i {
+  color: var(--gold, #FEBA66);
+}
+
+.btn-print-page {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-print-page:hover {
+  background: rgba(254, 186, 102, 0.15);
+  border-color: var(--gold, #FEBA66);
+  color: var(--gold, #FEBA66);
+}
+
+
+/* ── Área de Conteúdo ── */
+.legal-content-wrapper {
+  padding: 48px 0 80px;
+  position: relative;
+}
+
+/* ==========================================================================
+   CONTAINER DO DOCUMENTO: FUNDO BRANCO (#FFFFFF) COM ALTA LEGIBILIDADE
+   ========================================================================== */
+.legal-document-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #FFFFFF !important;
+  color: #1F2937 !important;
+  border: 1px solid rgba(254, 186, 102, 0.28);
+  border-radius: 24px;
+  padding: 52px 56px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .legal-document-card {
+    padding: 32px 22px;
+    border-radius: 18px;
+  }
+}
+
+/* ── Seções Internas do Documento ── */
+.legal-section {
+  scroll-margin-top: 140px;
+  margin-bottom: 56px;
+  background: transparent;
+  color: #1F2937;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section-divider {
+  height: 1px;
+  background: #E5E7EB;
+  margin: 56px 0;
+}
+
+/* ── Cabeçalho dos Blocos (Política de Privacidade / Termos) ── */
+.legal-block-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.legal-block-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(254, 186, 102, 0.18), rgba(200, 11, 13, 0.1));
+  border: 1px solid rgba(254, 186, 102, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red, #C80B0D);
+}
+
+.legal-block-info h2 {
+  font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+  font-weight: 800;
+  color: #111827 !important;
+  line-height: 1.25;
+}
+
+.legal-block-info p {
+  font-size: 0.88rem;
+  color: #6B7280 !important;
+  margin-top: 4px;
+}
+
+/* ── Cláusulas e Textos Dentro do Container Branco ── */
+.legal-clause {
+  margin-bottom: 32px;
+}
+
+.legal-clause:last-child {
+  margin-bottom: 0;
+}
+
+.legal-clause-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827 !important;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.legal-clause-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(200, 11, 13, 0.08);
+  border: 1px solid rgba(200, 11, 13, 0.25);
+  color: var(--red, #C80B0D);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.legal-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151 !important;
+  margin-bottom: 16px;
+}
+
+.legal-text strong {
+  color: #111827 !important;
+  font-weight: 700;
+}
+
+.legal-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Cards de Destaque Dentro do Container Branco ── */
+.legal-callout-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #F59E0B;
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 22px 0;
+}
+
+.legal-callout-box.callout-ad {
+  background: #F9FAFB;
+  border-color: #E5E7EB;
+  border-left-color: var(--red, #C80B0D);
+}
+
+.legal-callout-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #92400E;
+  margin-bottom: 12px;
+}
+
+.legal-callout-box.callout-ad .legal-callout-title {
+  color: #991B1B;
+}
+
+.legal-callout-title i {
+  color: #D97706;
+}
+
+.legal-callout-box.callout-ad .legal-callout-title i {
+  color: var(--red, #C80B0D);
+}
+
+.legal-callout-box p {
+  font-size: 0.94rem;
+  line-height: 1.72;
+  color: #4B5563 !important;
+  margin-bottom: 12px;
+}
+
+.legal-callout-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Lista de Compromissos do Usuário (A, B, C) ── */
+.legal-commit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.legal-commit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 16px 20px;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.legal-commit-item:hover {
+  border-color: #CBD5E1;
+  background: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.legal-commit-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: var(--red, #C80B0D);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.legal-commit-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #374151 !important;
+}
+
+.legal-commit-desc strong {
+  color: #111827 !important;
+}
+
+/* ── Lista de Restrições da Licença (Termos item 2) ── */
+.legal-restriction-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+  padding-left: 0;
+}
+
+.legal-restriction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #374151 !important;
+}
+
+.legal-restriction-item i {
+  color: var(--red, #C80B0D);
+  margin-top: 3px;
+  min-width: 16px;
+}
+
+/* ── Caixa de Efetividade & Vigência ── */
+.legal-effective-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 16px 22px;
+  margin-top: 32px;
+}
+
+.legal-effective-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.94rem;
+  color: #1F2937 !important;
+  font-weight: 600;
+}
+
+.legal-effective-text i {
+  color: #16A34A;
+}
+
+.legal-effective-date {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+  background: #E5E7EB;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #D1D5DB;
+}
+
+/* ── Banner de Dúvidas / Contato no Final ── */
+.legal-support-card {
+  margin-top: 56px;
+  background: linear-gradient(135deg, #FFF7ED 0%, #FEF2F2 100%);
+  border: 1px solid #FED7AA;
+  border-radius: 18px;
+  padding: 30px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.legal-support-text h3 {
+  font-size: 1.2rem;
+  color: #111827 !important;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.legal-support-text p {
+  font-size: 0.93rem;
+  color: #4B5563 !important;
+  line-height: 1.5;
+}
+
+.legal-support-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-legal-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-legal-primary {
+  background: var(--red, #C80B0D);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 15px rgba(200, 11, 13, 0.25);
+}
+
+.btn-legal-primary:hover {
+  background: #A6090B;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 11, 13, 0.4);
+}
+
+.btn-legal-outline {
+  background: #FFFFFF;
+  color: #374151 !important;
+  border: 1px solid #D1D5DB;
+}
+
+.btn-legal-outline:hover {
+  background: #F3F4F6;
+  color: #111827 !important;
+  border-color: #9CA3AF;
+}
+
+/* ── Botão Flutuante Voltar ao Topo ── */
+.legal-back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(18, 18, 22, 0.9);
+  border: 1px solid var(--gold, #FEBA66);
+  color: var(--gold, #FEBA66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 995;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.legal-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.legal-back-to-top:hover {
+  background: var(--gold, #FEBA66);
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(254, 186, 102, 0.4);
+}
+
+.active-legal-link {
+  color: var(--gold, #FEBA66) !important;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ── Estilos de Impressão (Clean Print) ── */
+@media print {
+  .topbar,
+  .site-header,
+  .legal-breadcrumbs,
+  .legal-nav-sticky,
+  .legal-meta-bar .btn-print-page,
+  .legal-support-card,
+  .legal-back-to-top,
+  .s-footer,
+  #clube-modal {
+    display: none !important;
+  }
+
+  body, .legal-page {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .legal-hero {
+    border-bottom: 2px solid #333;
+    padding: 20px 0;
+    text-align: left;
+    background: none !important;
+  }
+
+  .legal-hero-title {
+    color: #000 !important;
+    font-size: 24pt !important;
+  }
+
+  .legal-hero-title span {
+    color: #000 !important;
+  }
+
+  .legal-hero-badge {
+    border: 1px solid #666 !important;
+    color: #333 !important;
+    background: none !important;
+  }
+
+  .legal-document-card {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .legal-block-info h2,
+  .legal-clause-title,
+  .legal-callout-title {
+    color: #000 !important;
+  }
+
+  .legal-text,
+  .legal-commit-desc,
+  .legal-restriction-item {
+    color: #222 !important;
+  }
+
+  .legal-callout-box {
+    background: #f8f8f8 !important;
+    border: 1px solid #ccc !important;
+    border-left: 4px solid #333 !important;
+    color: #111 !important;
+  }
+
+  .legal-commit-item {
+    background: #fafafa !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+}
