@@ -1,0 +1,530 @@
+/* ==========================================================================
+   HEADER & TOPBAR STANDALONE — SUPERMERCADOS MAIS B (SHOW DE PRÊMIOS)
+   Design System Premium com Topbar Dourada Metálica, Sticky Header e Mobile Drawer.
+   ========================================================================== */
+
+/* ──────────────────────────────────────────────
+   1. VARIÁVEIS DO TEMA & DESIGN TOKENS
+   ────────────────────────────────────────────── */
+:root {
+  /* Cores Principais */
+  --hdr-black: #000000;
+  --hdr-black-soft: #0d0d0d;
+  --hdr-text-light: #ffffff;
+  --hdr-text-muted: #bbbbbb;
+  --hdr-text-dark: #000000;
+
+  /* Paleta de Destaques & Ações */
+  --hdr-gold-primary: #FEBA66;
+  --hdr-gold-light: #FFD49A;
+  --hdr-gold-dark: #A86200;
+  --hdr-gold-gradient: linear-gradient(135deg, #FEBA66 0%, #E59F48 100%);
+  --hdr-topbar-gradient: linear-gradient(90deg, #D4882B 0%, #FEBA66 50%, #D4882B 100%);
+
+  --hdr-red-primary: #C80B0D;
+  --hdr-red-hover: #A6090B;
+
+  /* Dimensões & Espaçamento */
+  --hdr-max-width: 1280px;
+  --hdr-padding-x: 24px;
+  --hdr-height-desktop: 72px;
+  --hdr-height-mobile: 64px;
+  --hdr-logo-height-desktop: 46px;
+  --hdr-logo-height-mobile: 40px;
+
+  /* Tipografia */
+  --hdr-font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Animações e Sombras */
+  --hdr-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --hdr-shadow-default: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --hdr-shadow-scrolled: 0 8px 30px rgba(0, 0, 0, 0.75);
+}
+
+/* Scroll Margin para navegação suave com sticky header */
+section[id],
+div[id].scroll-target {
+  scroll-margin-top: calc(var(--hdr-height-desktop) + 16px);
+}
+
+@media (max-width: 768px) {
+  section[id],
+  div[id].scroll-target {
+    scroll-margin-top: calc(var(--hdr-height-mobile) + 16px);
+  }
+}
+
+/* ──────────────────────────────────────────────
+   2. TOPBAR DOURADA RADIANTE (FAIXA DECORATIVA 5PX)
+   ────────────────────────────────────────────── */
+.topbar {
+  height: 5px;
+  background: var(--hdr-topbar-gradient);
+  position: relative;
+  z-index: 1001;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(254, 186, 102, 0.4);
+}
+
+/* Feixe Radiante Lens-Flare Dourado Passante (Glow Hotspot) */
+.topbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.95) 50%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 0 6px #FFD49A);
+  animation: topbarFlareGlint 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes topbarFlareGlint {
+  0% { left: -100px; opacity: 0; }
+  15% { opacity: 1; }
+  60%, 100% { left: 110%; opacity: 0; }
+}
+
+/* ──────────────────────────────────────────────
+   3. HEADER PRINCIPAL (STICKY COM LOGO CENTRAL)
+   ────────────────────────────────────────────── */
+.site-header {
+  background: var(--hdr-black);
+  color: var(--hdr-text-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--hdr-shadow-default);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--hdr-font-family);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
+  will-change: transform;
+}
+
+.site-header.scrolled {
+  box-shadow: var(--hdr-shadow-scrolled);
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
+.header-inner {
+  max-width: var(--hdr-max-width);
+  margin: 0 auto;
+  padding: 0 var(--hdr-padding-x);
+  min-height: var(--hdr-height-desktop);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+}
+
+/* ──────────────────────────────────────────────
+   4. LOGO CENTRAL
+   ────────────────────────────────────────────── */
+.header-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header-logo img {
+  height: var(--hdr-logo-height-desktop);
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover img {
+  transform: scale(1.03);
+}
+
+/* Fallback de texto se não houver imagem */
+.header-logo-text {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-logo-text .highlight {
+  color: var(--hdr-gold-primary);
+}
+
+/* ──────────────────────────────────────────────
+   5. NAVEGAÇÃO ESQUERDA & DIREITA
+   ────────────────────────────────────────────── */
+.nav-left, 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 0%;
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+/* Links do Menu */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--hdr-text-muted);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: var(--hdr-transition);
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--hdr-text-light);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Link Ativo */
+.nav-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: var(--hdr-gold-primary);
+  border-radius: 2px;
+}
+
+/* Ícones Lucide dentro dos Links */
+.nav-link [data-lucide],
+.nav-link svg,
+.nav-link i {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover [data-lucide],
+.nav-link:hover svg,
+.nav-link:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ──────────────────────────────────────────────
+   6. BOTÕES CTA ESPECIAIS (DOURADO PILL & VERMELHO)
+   ────────────────────────────────────────────── */
+
+/* Link Clube +Fidelidade (Inicia idêntico aos outros links; preenche em vermelho no hover) */
+.nav-link-cta-clube {
+  cursor: pointer;
+  transition: var(--hdr-transition);
+}
+
+.nav-link-cta-clube::after {
+  display: none !important; /* Remove traço inferior padrão de active */
+}
+
+/* Estado Hover / Focus: Preenchimento Vermelho Institucional com ícone e texto brancos */
+.nav-link-cta-clube:hover,
+.nav-link-cta-clube:focus-visible {
+  background: var(--hdr-red-primary, #C80B0D) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(200, 11, 13, 0.45) !important;
+  transform: translateY(-1px);
+}
+
+.nav-link-cta-clube:hover [data-lucide],
+.nav-link-cta-clube:hover svg,
+.nav-link-cta-clube:hover i,
+.nav-link-cta-clube:focus-visible [data-lucide],
+.nav-link-cta-clube:focus-visible svg,
+.nav-link-cta-clube:focus-visible i {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Botão Dourado Genérico (caso seja utilizado) */
+.btn-cta-gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: var(--hdr-gold-gradient) !important;
+  color: #000000 !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  padding: 7px 18px !important;
+  border-radius: 999px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 3px 12px rgba(254, 186, 102, 0.35) !important;
+  transition: var(--hdr-transition) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.btn-cta-gold::after {
+  display: none !important;
+}
+
+.btn-cta-gold [data-lucide],
+.btn-cta-gold svg {
+  stroke: #000000 !important;
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+.btn-cta-gold:hover {
+  background: linear-gradient(135deg, var(--hdr-gold-light) 0%, #E59F48 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 5px 16px rgba(254, 186, 102, 0.55) !important;
+  color: #000000 !important;
+}
+
+/* Botão Vermelho CTA (Contatos / WhatsApp / Pedidos) */
+.btn-cta-red {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: var(--hdr-red-primary) !important;
+  color: #ffffff !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  padding: 8px 18px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 3px 12px rgba(200, 11, 13, 0.35) !important;
+  transition: var(--hdr-transition) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.btn-cta-red [data-lucide],
+.btn-cta-red svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none;
+}
+
+.btn-cta-red:hover {
+  background: var(--hdr-red-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 5px 16px rgba(200, 11, 13, 0.5) !important;
+}
+
+/* ──────────────────────────────────────────────
+   7. BOTÃO HAMBÚRGUER MOBILE TOGGLE
+   ────────────────────────────────────────────── */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 6px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 30;
+  transition: var(--hdr-transition);
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animação do Hambúrguer virando 'X' */
+.mobile-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.mobile-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ──────────────────────────────────────────────
+   8. RESPONSIVIDADE & MENU MOBILE
+   ────────────────────────────────────────────── */
+
+/* Laptops e Telas Médias (901px a 1180px) */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .nav-left, .nav-right {
+    gap: 8px;
+  }
+  .nav-link {
+    padding: 5px 7px;
+    font-size: 0.81rem;
+    gap: 5px;
+  }
+  .nav-link [data-lucide],
+  .nav-link svg,
+  .nav-link i {
+    width: 14px;
+    height: 14px;
+  }
+  .btn-cta-gold {
+    padding: 6px 14px !important;
+    font-size: 0.81rem !important;
+  }
+  .header-logo img {
+    height: 40px;
+  }
+}
+
+/* Mobile & Tablets (<= 900px) */
+@media (max-width: 900px) {
+  .site-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .header-inner {
+    min-height: var(--hdr-height-mobile);
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 12px;
+    transition: padding 0.3s ease;
+  }
+
+  .header-inner.menu-open {
+    padding-bottom: 20px;
+  }
+
+  /* Botão Hambúrguer Visível */
+  .mobile-toggle {
+    display: flex;
+    order: 1;
+  }
+
+  /* Logo no Mobile Centralizada */
+  .header-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    order: 2;
+  }
+
+  .header-inner.menu-open .header-logo {
+    top: 32px;
+  }
+
+  .header-logo img {
+    height: var(--hdr-logo-height-mobile);
+  }
+
+  /* Drawer / Dropdown do Menu Mobile */
+  .nav-left,
+  .nav-right {
+    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+    gap: 8px;
+    align-items: stretch;
+    order: 3;
+  }
+
+  .nav-left.open,
+  .nav-right.open {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    background: transparent;
+    padding: 0;
+    z-index: auto;
+    border: 0;
+    animation: headerFadeIn 0.25s ease forwards;
+  }
+
+  .nav-left.open {
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-left.open .nav-link,
+  .nav-right.open .nav-link,
+  .nav-right.open .btn-cta-red,
+  .nav-right.open .btn-cta-gold {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  .nav-right.open .btn-cta-red,
+  .nav-right.open .btn-cta-gold {
+    justify-content: center;
+    margin-top: 4px;
+  }
+}
+
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -4,10 +4,10 @@
 
 /* ── TOKENS ── */
 :root {
-  --gold: #DDA712;
-  --gold-hover: #c49310;
-  --gold-light: #F4C542;
-  --red: #BB2E2C;
+  --gold: #FEBA66;
+  --gold-hover: #E59F48;
+  --gold-light: #FFD49A;
+  --red: #C80B0D;
   --red-dark: #7A1A18;
   --cream: #FAF8F5;
   --cream-card: #F3EDE5;
@@ -16,7 +16,7 @@
   --dark-border: #2a2a2e;
   --black: #000;
   --wpp-green: #0C2518;
-  --font-serif: 'Playfair Display', 'Fraunces', Georgia, serif;
+  --font-serif: 'DM Sans', system-ui, sans-serif;
   --font-sans: 'DM Sans', system-ui, sans-serif;
 
   /* ── PADRÃO OFICIAL DE TIPOGRAFIA (DS 2026) ── */
@@ -77,152 +77,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .pill-badge-dark{
   display:inline-flex;align-items:center;gap:6px;
   padding:5px 14px;border-radius:var(--r-full);
-  background:rgba(221,167,18,.1);border:1px solid var(--gold);
+  background:rgba(254,186,102,.1);border:1px solid var(--gold);
   font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);
   margin-bottom:14px;
 }
 
 /* ──────────────────────────────────────────────
-   S0  TOPBAR DOURADA METÁLICA 3D ULTRA-COMPACTA
+   S0  HEADER & TOPBAR (Consulte src/css/header.css)
    ────────────────────────────────────────────── */
-.topbar {
-  background: var(--gold);
-  padding: 2px 0;
-  border-top: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
-  position: relative;
-  z-index: 1000;
-  overflow: hidden;
-  box-shadow: none;
-  font-size: 0.725rem;
-  font-weight: 500;
-  color: #000;
-}
 
-.topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;height:20px}
-.topbar-social{display:flex;gap:12px;align-items:center}
-.topbar-social a{color:#000;display:flex;align-items:center;transition:transform .2s, color .2s;opacity:0.9}
-.topbar-social a:hover{transform:scale(1.12);color:#5c3500;opacity:1}
-.topbar-social svg{width:12px;height:12px}
-.topbar-links{display:flex;gap:18px;align-items:center}
-.topbar-links a{color:#000;font-size:0.725rem;font-weight:500;letter-spacing:0.1px;text-decoration:none;transition:color .2s;opacity:0.9}
-.topbar-links a:hover{opacity:1;color:#5c3500;text-decoration:underline}
-
-/* ──────────────────────────────────────────────
-   S0  HEADER
-   ────────────────────────────────────────────── */
-.site-header{background:var(--black);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5)}
-.header-inner{max-width:1280px;margin:0 auto;padding:15px 32px;min-height:72px;display:flex;align-items:center;justify-content:space-between;position:relative}
-.header-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;z-index:10}
-.header-logo img{height:46px;width:auto;object-fit:contain}
-.nav-left,.nav-right{display:flex;align-items:center;gap:18px;flex:1 1 0%}
-.nav-right{justify-content:flex-end}
-.nav-link{display:inline-flex;align-items:center;gap:7px;font-size:.88rem;font-weight:600;color:#bbb;padding:5px 8px;border-radius:var(--r-sm);transition:all var(--ease);text-decoration:none}
-.nav-link:hover,.nav-link.active{color:#fff;background:rgba(255,255,255,.08)}
-
-/* Botão CTA Vermelho (Contatos) */
-.btn-cta-red {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  background: var(--red, #BB2E2C) !important;
-  color: #ffffff !important;
-  border: none !important;
-  outline: none !important;
-  padding: 9px 18px !important;
-  border-radius: 8px !important;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
-  box-shadow: 0 3px 12px rgba(187, 46, 44, 0.35) !important;
-  transition: all 0.28s ease !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  cursor: pointer !important;
-  opacity: 1 !important;
-}
-
-.btn-cta-red svg {
-  color: #ffffff !important;
-  stroke: #ffffff !important;
-  fill: none;
-}
-
-.btn-cta-red:hover {
-  background: #a32422 !important;
-  color: #ffffff !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 5px 16px rgba(187, 46, 44, 0.5) !important;
-}
-
-/* Botão CTA Dourado (Show de Prêmios) */
-.btn-cta-gold {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  background: linear-gradient(135deg, #FCBF0C 0%, #DDA712 100%) !important;
-  color: #000000 !important;
-  border: none !important;
-  outline: none !important;
-  padding: 9px 18px !important;
-  border-radius: 8px !important;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
-  box-shadow: 0 3px 12px rgba(221, 167, 18, 0.4) !important;
-  transition: all 0.28s ease !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  cursor: pointer !important;
-  opacity: 1 !important;
-}
-
-.btn-cta-gold svg {
-  color: #000000 !important;
-  stroke: #000000 !important;
-  fill: none;
-}
-
-.btn-cta-gold:hover {
-  background: linear-gradient(135deg, #FFD043 0%, #EAA90A 100%) !important;
-  color: #000000 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 5px 16px rgba(221, 167, 18, 0.55) !important;
-}
-
-.nav-link-cta-clube {
-  background: linear-gradient(135deg, #FCBF0C 0%, #DDA712 100%) !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-  padding: 7px 16px !important;
-  border-radius: 999px !important;
-  box-shadow: 0 3px 12px rgba(221, 167, 18, 0.35) !important;
-  transition: all 0.28s ease !important;
-  text-decoration: none !important;
-}
-
-.nav-link-cta-clube:hover {
-  background: linear-gradient(135deg, #FFD043 0%, #EAA90A 100%) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 5px 16px rgba(221, 167, 18, 0.55) !important;
-  color: #000000 !important;
-}
-
-.nav-link-cta-clube svg,
-.nav-link-cta-clube i {
-  color: #000000 !important;
-  stroke: #000000 !important;
-}
-
-.btn-encarte{
-  display:inline-flex;align-items:center;gap:7px;
-  background:#fff;color:var(--red);border:1.5px solid var(--red);
-  padding:7px 16px;border-radius:var(--r-full);font-weight:700;font-size:.85rem;
-  transition:all var(--ease);
-}
-.btn-encarte:hover{background:var(--red);color:#fff}
-.mobile-toggle{display:none;flex-direction:column;gap:5px}
-.mobile-toggle span{width:22px;height:2px;background:#fff;border-radius:2px}
 
 /* ──────────────────────────────────────────────
    S1  HERO
@@ -254,7 +117,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   background: #121214;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 2px solid #E5C158;
+  border: 2px solid #FEBA66;
   border-radius: 20px;
   padding: 10px 14px;
   display: grid;
@@ -265,7 +128,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   z-index: 2;
   box-shadow: 
     0 16px 40px rgba(0, 0, 0, 0.35),
-    0 0 20px rgba(229, 193, 88, 0.2),
+    0 0 20px rgba(254, 186, 102, 0.2),
     inset 0 1px 0 rgba(255, 235, 170, 0.15);
   width: 100%;
   max-width: 100%;
@@ -286,7 +149,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   min-width: 0;
 }
 .metric:hover {
-  background: rgba(229, 193, 88, 0.08);
+  background: rgba(254, 186, 102, 0.08);
 }
 .metric:last-child {
   border-right: none;
@@ -303,8 +166,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .metric-icon svg {
   width: 30px;
   height: 30px;
-  color: #E5C158;
-  stroke: #E5C158;
+  color: #FEBA66;
+  stroke: #FEBA66;
 }
 .metric:hover .metric-icon {
   transform: scale(1.08);
@@ -314,7 +177,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   font-size: 0.92rem;
   font-weight: 800;
   line-height: 1.15;
-  color: #E5C158;
+  color: #FEBA66;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
@@ -361,7 +224,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .s-depoimentos{background:var(--dark);color:#fff;padding:80px 0;position:relative;overflow:hidden}
 .s-depoimentos::before,.s-depoimentos::after{
   content:'';position:absolute;width:180px;height:180px;opacity:.12;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 Q50 20 80 60' stroke='%23DDA712' fill='none' stroke-width='1.5'/%3E%3Cpath d='M30 90 Q60 30 90 50' stroke='%23DDA712' fill='none' stroke-width='1'/%3E%3Ccircle cx='45' cy='55' r='3' fill='%23DDA712'/%3E%3C/svg%3E") no-repeat center/contain;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 Q50 20 80 60' stroke='%23FEBA66' fill='none' stroke-width='1.5'/%3E%3Cpath d='M30 90 Q60 30 90 50' stroke='%23FEBA66' fill='none' stroke-width='1'/%3E%3Ccircle cx='45' cy='55' r='3' fill='%23FEBA66'/%3E%3C/svg%3E") no-repeat center/contain;
   pointer-events:none;
 }
 .s-depoimentos::before{top:20px;left:-30px;transform:rotate(-20deg)}
@@ -476,7 +339,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 
 .clube-brand-red {
-  color: #C51E28;
+  color: #C80B0D;
   font-weight: 800;
 }
 
@@ -565,7 +428,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 
 .app-tag-gold {
-  color: #F4C542;
+  color: #FEBA66;
   font-weight: 700;
 }
 
@@ -580,7 +443,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 
 .clube-sparkle-icon {
-  color: #D49B28;
+  color: #FEBA66;
   flex-shrink: 0;
 }
 
@@ -683,7 +546,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .faq-a p:last-child{margin-bottom:0}
 .faq-a strong{color:#222;font-weight:600}
 .faq-inner-alert{
-  background:#FFFDF5;border:1px solid rgba(221,167,18,0.35);border-left:4px solid var(--gold);
+  background:#FFFDF5;border:1px solid rgba(254,186,102,0.35);border-left:4px solid var(--gold);
   border-radius:var(--r-sm);padding:14px 18px;margin:4px 0 18px;font-size:.9rem;color:#444;line-height:1.55;
 }
 .faq-inner-alert strong{color:#111;font-weight:700}
@@ -717,7 +580,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   box-shadow:var(--shadow-lg);
   position:relative;
   overflow:hidden;
-  border:1px solid rgba(221,167,18,0.12);
+  border:1px solid rgba(254,186,102,0.12);
 }
 .wpp-left{
   display:flex;
@@ -892,29 +755,29 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     --p-size: 14px;
     --p-lh: 22px;
   }
-  .header-inner{min-height:64px;padding:8px 16px;flex-wrap:wrap;align-content:flex-start;row-gap:8px}
-  .header-inner.menu-open{padding-bottom:16px}
-  .header-logo{top:50%;transform:translate(-50%,-50%)}
-  .header-inner.menu-open .header-logo{top:32px}
-  .header-logo img{height:42px}
-  .mobile-toggle{display:flex;position:relative;z-index:20;width:34px;height:34px;padding:7px;justify-content:center}
-  .nav-left,.nav-right{display:none;flex:0 0 100%;width:100%;gap:6px;align-items:stretch}
-  .nav-left.open,.nav-right.open{
-    display:flex;flex-direction:column;position:static;background:#000;padding:0;gap:6px;z-index:auto;
-    border:0;
-  }
-  .nav-left.open .nav-link,.nav-right.open .nav-link,.nav-right.open .btn-cta-red,.nav-right.open .btn-cta-gold{
-    width:100%;justify-content:flex-start;padding:10px 12px;
-  }
-  .nav-right.open .btn-cta-red,.nav-right.open .btn-cta-gold{justify-content:center}
   .s-ofertas .section-head{flex-direction:column;gap:12px;align-items:center}
-  .s-ofertas .link-arrow-gold{position:static;margin-top:4px}
-  .ofertas-grid{grid-template-columns:1fr 1fr}
-  .footer-bottom{display:flex;flex-direction:column;gap:10px;text-align:center}
-  .footer-bottom > :first-child, .footer-bottom > :nth-child(2), .footer-bottom > :last-child{text-align:center;justify-self:center}
-  .footer-dev{justify-content:center}
-  .s-unidades{border-radius:24px 24px 0 0}
-  .topbar-links{display:none}
+  .s-footer{padding:40px 0 24px}
+  .footer-center{margin-bottom:24px}
+  .footer-socials{flex-wrap:wrap;justify-content:center;gap:10px}
+  .footer-line{margin-bottom:20px}
+  .footer-bottom{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:12px;
+    font-size:.78rem;
+    line-height:1.5;
+  }
+  .footer-bottom > :first-child,
+  .footer-bottom > :nth-child(2),
+  .footer-bottom > :last-child{
+    text-align:center;
+    justify-self:center;
+    width:100%;
+  }
+  .footer-dev{display:inline-flex;align-items:center;justify-content:center;gap:8px}
 }
 @media(max-width:480px){
   :root {

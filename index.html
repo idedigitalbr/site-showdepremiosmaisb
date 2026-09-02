@@ -15,31 +15,85 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Show de Prêmios Mais B | Supermercados Mais B" />
   <meta property="og:description" content="A cada R$ 100 em compras ganhe 1 cupom e concorra a 1 Carro 0km, 4 Motos 0km, 4 TVs Smart 50&quot; e 12 Vales-Compras de R$ 2.000!" />
-  <meta property="og:image" content="./assets/S1 TOPO HERO/S1 TOPO HERO-1920x1080.webp" />
+  <meta property="og:image" content="./assets/S1%20TOPO%20HERO/S1%20TOPO%20HERO-1920x1080.webp" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..900;1,9..40,400..900&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Playfair+Display:ital,wght@0,700..900;1,700..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 
   <!-- CSS Padrão do Projeto + Campanha -->
-  <link rel="stylesheet" href="./src/css/tokens.css" />
-  <link rel="stylesheet" href="./src/css/main.css?v=36.3" />
-  <link rel="stylesheet" href="./src/css/sections.css?v=36.0" />
-  <link rel="stylesheet" href="./src/css/show-de-premios.css?v=13.8" />
+  <link rel="stylesheet" href="./src/css/tokens.css?v=2.1" />
+  <link rel="stylesheet" href="./src/css/header.css?v=2.3" />
+  <link rel="stylesheet" href="./src/css/main.css?v=37.3" />
+  <link rel="stylesheet" href="./src/css/sections.css?v=37.1" />
+  <link rel="stylesheet" href="./src/css/show-de-premios.css?v=15.4" />
 </head>
 <body class="sp-body">
+
+  <!-- ==========================================================================
+       1. TOPBAR DOURADA RADIANTE (FAIXA DECORATIVA 5PX)
+       ========================================================================== -->
+  <div class="topbar" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       2. HEADER PRINCIPAL STICKY COM LOGO CENTRAL
+       ========================================================================== -->
+  <header class="site-header" id="topo">
+    <div class="header-inner">
+      <!-- Botão Hambúrguer (Mobile) -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Navegação Esquerda -->
+      <nav class="nav-left" id="nav-left" aria-label="Navegação Principal Esquerda">
+        <a href="#hero" class="nav-link active">
+          <span>Início</span>
+        </a>
+        <a href="#participar" class="nav-link">
+          <span>Como Participar</span>
+        </a>
+        <a href="#premiacao" class="nav-link">
+          <span>Premiação</span>
+        </a>
+        <a href="#patrocinadores" class="nav-link">
+          <span>Patrocinadores</span>
+        </a>
+      </nav>
+
+      <!-- Logo Central -->
+      <a href="#hero" class="header-logo" aria-label="Página Inicial Supermercados Mais B">
+        <img src="./assets/Logos/logo-especial-.webp" alt="Supermercados Mais B" onerror="this.onerror=null; this.src='./assets/Logos/IMG_5606.PNG';" />
+      </a>
+
+      <!-- Navegação Direita -->
+      <nav class="nav-right" id="nav-right" aria-label="Navegação Principal Direita">
+        <a href="#faq" class="nav-link">
+          <span>Dúvidas</span>
+        </a>
+        <a href="#regulamento" class="nav-link">
+          <span>Regulamento</span>
+        </a>
+        <!-- Botão CTA Cápsula Dourada (Abre Modal Clube +Fidelidade) -->
+        <a href="#clube" class="nav-link nav-link-cta-clube" data-open-clube-modal aria-haspopup="dialog" aria-controls="clube-modal">
+          <i data-lucide="smartphone"></i>
+          <span>Clube +Fidelidade</span>
+        </a>
+      </nav>
+    </div>
+  </header>
 
   <!-- ============================================
        HERO SECTION (BANNER SOLO)
        ============================================ -->
   <section class="sp-hero" id="hero">
     <picture class="sp-hero-picture">
-      <source media="(max-width: 767px)" srcset="./assets/S1 TOPO HERO/mobile/BANNER-MOBILE-1080X1440.png.webp" />
-      <img src="./assets/S1 TOPO HERO/S1 TOPO HERO-1920x1080.webp" alt="Show de Prêmios Supermercados Mais B" class="sp-hero-img" width="1920" height="1080" fetchpriority="high" />
+      <source media="(max-width: 768px)" srcset="./assets/S1%20TOPO%20HERO/mobile/BANNER-MOBILE-1080X1440.png.webp" />
+      <img src="./assets/S1%20TOPO%20HERO/S1%20TOPO%20HERO-1920x1080.webp" alt="Show de Prêmios Supermercados Mais B" class="sp-hero-img" width="1920" height="1080" fetchpriority="high" />
     </picture>
   </section>
 
@@ -124,7 +178,7 @@
         
         <!-- Coluna Esquerda: Imagem Oficial da Premiação -->
         <div class="sp-matched-media">
-          <img src="./assets/S3 PREMIACAO OFICIAL/PREMIACAO-OFICIAL.webp" alt="Show de Prêmios Mais B - Premiação Oficial" class="sp-matched-img" loading="lazy" />
+          <img src="./assets/S3%20PREMIACAO%20OFICIAL/PREMIACAO-OFICIAL.webp" alt="Show de Prêmios Mais B - Premiação Oficial" class="sp-matched-img" loading="lazy" />
         </div>
 
         <!-- Coluna Direita: Titulinho + Headline + Subtítulo + Cards 2x2 -->
@@ -226,7 +280,7 @@
        ============================================ -->
   <section class="sp-hero sp-patrocinadores sp-banner-pre-faq" id="patrocinadores">
     <picture class="sp-hero-picture">
-      <img src="./assets/S4 PATROCINADORES/S4 Logos Patrocinadores-1920x1080.webp" alt="Patrocinadores Oficiais - Show de Prêmios Supermercados Mais B" class="sp-hero-img" width="1920" height="1080" loading="lazy" />
+      <img src="./assets/S4%20PATROCINADORES/S4%20Logos%20Patrocinadores-1920x1080.webp" alt="Patrocinadores Oficiais - Show de Prêmios Supermercados Mais B" class="sp-hero-img" width="1920" height="1080" loading="lazy" />
     </picture>
   </section>
 
@@ -334,14 +388,14 @@
         <div class="sp-reg-left">
           <div class="sp-reg-icon-wrapper">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="4" width="28" height="38" rx="4" stroke="#FCBF0C" stroke-width="2.5" fill="none"/>
-              <path d="M26 4L34 12" stroke="#FCBF0C" stroke-width="2.5" stroke-linecap="round"/>
-              <line x1="12" y1="14" x2="22" y2="14" stroke="#FCBF0C" stroke-width="2.5" stroke-linecap="round"/>
-              <line x1="12" y1="20" x2="28" y2="20" stroke="#FCBF0C" stroke-width="2.5" stroke-linecap="round"/>
-              <line x1="12" y1="26" x2="20" y2="26" stroke="#FCBF0C" stroke-width="2.5" stroke-linecap="round"/>
+              <rect x="6" y="4" width="28" height="38" rx="4" stroke="#FEBA66" stroke-width="2.5" fill="none"/>
+              <path d="M26 4L34 12" stroke="#FEBA66" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="12" y1="14" x2="22" y2="14" stroke="#FEBA66" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="12" y1="20" x2="28" y2="20" stroke="#FEBA66" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="12" y1="26" x2="20" y2="26" stroke="#FEBA66" stroke-width="2.5" stroke-linecap="round"/>
               <!-- Escudo com Check -->
-              <path d="M34 26C34 26 42 27 42 33C42 39 34 43 34 43C34 43 26 39 26 33C26 27 34 26 34 26Z" fill="rgba(252, 191, 12, 0.15)" stroke="#FCBF0C" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M30.5 33.5L33 36L38 31" stroke="#FCBF0C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M34 26C34 26 42 27 42 33C42 39 34 43 34 43C34 43 26 39 26 33C26 27 34 26 34 26Z" fill="rgba(254, 186, 102, 0.15)" stroke="#FEBA66" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M30.5 33.5L33 36L38 31" stroke="#FEBA66" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="sp-reg-text">
@@ -371,7 +425,6 @@
 
       <div class="footer-center">
         <a href="#hero"><img src="./assets/Logos/IMG_5606.PNG" alt="Supermercados Mais B" class="footer-logo" /></a>
-        <p class="footer-slogan">Cada dia melhor pra você.<br>O supermercado com a melhor experiência de compra.</p>
         <div class="footer-socials">
           <a href="https://www.instagram.com/maisbsupermercados/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
           <a href="https://www.facebook.com/MaisBsupermercados/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -495,6 +548,7 @@
 
   <!-- Scripts -->
   <script src="./src/js/lucide-init.js?v=1.0"></script>
+  <script src="./src/js/header.js?v=1.1"></script>
   <script src="./src/js/main.js?v=11.1"></script>
   <script src="./src/js/show-de-premios.js?v=12.0"></script>
 </body>

@@ -4,9 +4,9 @@
      ========================================================================== */
   
   /* Cores Principais de Marca */
-  --yellow: #DDA712;        /* Amarelo Mostarda Premium / Gold */
-  --yellow-light: #F4C542;  /* Amarelo Iluminação / Destaque */
-  --red: #BB2E2C;           /* Vermelho Elegante / Bordô Premium */
+  --yellow: #FEBA66;        /* Amarelo Ouro / Gold #FEBA66 */
+  --yellow-light: #FFD49A;  /* Amarelo Iluminação / Destaque */
+  --red: #C80B0D;           /* Vermelho Institucional Oficial Mais B */
   --red-dark: #7A1A18;      /* Vermelho Vinho Escuro */
   --black: #000000;
   --graphite: #121212;
@@ -25,16 +25,16 @@
   --orange: #e67e22;
 
   /* Gradientes Premium & Card Themes */
-  --gold-gradient: linear-gradient(135deg, #DDA712 0%, #B5840B 100%);
-  --red-gradient: linear-gradient(135deg, #BB2E2C 0%, #7A1A18 100%);
+  --gold-gradient: linear-gradient(135deg, #FEBA66 0%, #E59F48 100%);
+  --red-gradient: linear-gradient(135deg, #C80B0D 0%, #7A1A18 100%);
   --offer-card-gradient: linear-gradient(180deg, #7A1A18 0%, #4D0E0D 100%);
   
-  --bg-gradient: radial-gradient(circle at 12% 0%, rgba(221, 167, 18, 0.12), transparent 38%), 
-                 radial-gradient(circle at 88% 14%, rgba(187, 46, 44, 0.08), transparent 28%), 
+  --bg-gradient: radial-gradient(circle at 12% 0%, rgba(254, 186, 102, 0.12), transparent 38%), 
+                 radial-gradient(circle at 88% 14%, rgba(200, 11, 13, 0.08), transparent 28%), 
                  #050505;
   --glass-surface: rgba(12, 12, 12, 0.94);
-  --glass-border: rgba(221, 167, 18, 0.18);
-  --glass-border-glow: rgba(221, 167, 18, 0.35);
+  --glass-border: rgba(254, 186, 102, 0.18);
+  --glass-border-glow: rgba(254, 186, 102, 0.35);
 
   --radius: 28px;
   --shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
