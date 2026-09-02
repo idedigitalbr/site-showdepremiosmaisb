@@ -17,8 +17,8 @@ services:
       - "traefik.http.routers.showdepremiosmaisb-router.entrypoints=websecure"
       - "traefik.http.routers.showdepremiosmaisb-router.tls=true"
       - "traefik.http.routers.showdepremiosmaisb-router.tls.certresolver=letsencrypt"
-      # Router - domínio oficial .com.br
-      - "traefik.http.routers.showdepremiosmaisb-oficial.rule=Host(`showdepremiosmaisb.com.br`)"
+      # Router - domínio oficial .com.br (com e sem www)
+      - "traefik.http.routers.showdepremiosmaisb-oficial.rule=Host(`showdepremiosmaisb.com.br`) || Host(`www.showdepremiosmaisb.com.br`)"
       - "traefik.http.routers.showdepremiosmaisb-oficial.entrypoints=websecure"
       - "traefik.http.routers.showdepremiosmaisb-oficial.tls=true"
       - "traefik.http.routers.showdepremiosmaisb-oficial.tls.certresolver=letsencrypt"
