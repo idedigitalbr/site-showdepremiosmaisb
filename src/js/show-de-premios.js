@@ -3,24 +3,41 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // 1. FAQ Accordion
+  // 1. FAQ Accordion com Acessibilidade ARIA e Navegação por Teclado
   var faqItems = document.querySelectorAll('.sp-faq-item');
+  
+  function toggleFaqItem(item) {
+    var header = item.querySelector('.sp-faq-header');
+    var isActive = item.classList.contains('faq-active');
+    
+    faqItems.forEach(function (other) {
+      if (other !== item) {
+        other.classList.remove('faq-active');
+        var otherHeader = other.querySelector('.sp-faq-header');
+        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    if (isActive) {
+      item.classList.remove('faq-active');
+      if (header) header.setAttribute('aria-expanded', 'false');
+    } else {
+      item.classList.add('faq-active');
+      if (header) header.setAttribute('aria-expanded', 'true');
+    }
+  }
+
   faqItems.forEach(function (item) {
     var header = item.querySelector('.sp-faq-header');
     if (header) {
       header.addEventListener('click', function () {
-        var isActive = item.classList.contains('faq-active');
-        
-        faqItems.forEach(function (other) {
-          if (other !== item) {
-            other.classList.remove('faq-active');
-          }
-        });
+        toggleFaqItem(item);
+      });
 
-        if (isActive) {
-          item.classList.remove('faq-active');
-        } else {
-          item.classList.add('faq-active');
+      header.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space') {
+          e.preventDefault();
+          toggleFaqItem(item);
         }
       });
     }

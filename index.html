@@ -6,16 +6,31 @@
   <title>Show de Prêmios Mais B | Supermercados Mais B</title>
   <meta name="description" content="Participe do Show de Prêmios Supermercados Mais B! Concorra a 1 Carro 0km, 4 Motos 0km, 4 TVs Smart 50&quot; e 12 Vales-Compras de R$ 2.000,00." />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://showdepremiosmaisb.com.br/" />
 
-  <!-- Favicon -->
+  <!-- Favicon & PWA Manifest -->
   <link rel="icon" type="image/webp" href="./assets/Logos/FavIcon-Supermercados-MaisB-icone).webp" />
   <link rel="apple-touch-icon" href="./assets/Logos/FavIcon-Supermercados-MaisB-icone).webp" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <meta name="theme-color" content="#C89D42" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Supermercados Mais B" />
+  <meta property="og:url" content="https://showdepremiosmaisb.com.br/" />
   <meta property="og:title" content="Show de Prêmios Mais B | Supermercados Mais B" />
   <meta property="og:description" content="A cada R$ 100 em compras ganhe 1 cupom e concorra a 1 Carro 0km, 4 Motos 0km, 4 TVs Smart 50&quot; e 12 Vales-Compras de R$ 2.000!" />
-  <meta property="og:image" content="./assets/S1%20TOPO%20HERO/S1%20TOPO%20HERO-1920x1080.webp" />
+  <meta property="og:image" content="https://showdepremiosmaisb.com.br/assets/S1%20TOPO%20HERO/S1%20TOPO%20HERO-1920x1080.webp" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:alt" content="Show de Prêmios Supermercados Mais B" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Show de Prêmios Mais B | Supermercados Mais B" />
+  <meta name="twitter:description" content="Participe do Show de Prêmios Supermercados Mais B! Concorra a 1 Carro 0km, 4 Motos 0km, 4 TVs Smart 50&quot; e 12 Vales-Compras de R$ 2.000,00." />
+  <meta name="twitter:image" content="https://showdepremiosmaisb.com.br/assets/S1%20TOPO%20HERO/S1%20TOPO%20HERO-1920x1080.webp" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +38,85 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Schema.org Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://showdepremiosmaisb.com.br/#organization",
+        "name": "Supermercados Mais B",
+        "url": "https://showdepremiosmaisb.com.br/",
+        "logo": "https://showdepremiosmaisb.com.br/assets/Logos/logo-especial-.webp",
+        "sameAs": [
+          "https://www.instagram.com/maisbsupermercados/",
+          "https://www.facebook.com/MaisBsupermercados/",
+          "https://www.youtube.com/channel/UC_5InPLuERhTQ5wnIeS480g"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://showdepremiosmaisb.com.br/#website",
+        "url": "https://showdepremiosmaisb.com.br/",
+        "name": "Show de Prêmios Mais B",
+        "publisher": { "@id": "https://showdepremiosmaisb.com.br/#organization" },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://showdepremiosmaisb.com.br/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual o período de participação na promoção?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A promoção é válida de 02/09/2026 a 29/01/2027."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quem pode participar desta promoção?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pessoas físicas, residentes e domiciliadas no Brasil, sem qualquer limite de idade, desde que preenchidos todos os requisitos do regulamento. A participação deverá ser para maiores de 18 anos e em caso de participação para menores de idade deverão ser representados por seus responsáveis legais."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como faço para me cadastrar na promoção?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Os clientes deverão, obrigatoriamente, baixar o aplicativo 'Clube +Fidelidade' disponível nas plataformas Android e iOS ou acessar o site da empresa promotora e realizar o cadastro completo dos seus dados pessoais."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a mecânica de participação?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A cada R$ 100,00 em compras, você tem direito a um cupom. Para isso, informe seu CPF cadastrado no caixa, dirija-se aos totens de impressão da promoção, imprima seus cupons e deposite-os na urna."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como será realizado o sorteio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O sorteio será realizado no dia 29/01/2027 às 18:00h com a retirada manual e aleatória na frente de loja da Unidade Tapanã. Serão 21 sorteios em sequência: 12 Vales-compras de R$ 2.000,00, 4 Smart TVs Samsung 50\", 4 Motos 0km e 1 Carro 0km."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- CSS Padrão do Projeto + Campanha -->
-  <link rel="stylesheet" href="./src/css/tokens.css?v=2.1" />
+  <link rel="stylesheet" href="./src/css/tokens.css?v=2.2" />
   <link rel="stylesheet" href="./src/css/header.css?v=2.3" />
   <link rel="stylesheet" href="./src/css/main.css?v=37.3" />
   <link rel="stylesheet" href="./src/css/sections.css?v=37.1" />
@@ -91,6 +181,7 @@
        HERO SECTION (BANNER SOLO)
        ============================================ -->
   <section class="sp-hero" id="hero">
+    <h1 class="visually-hidden">Show de Prêmios Supermercados Mais B — Aniversário 16 Anos</h1>
     <picture class="sp-hero-picture">
       <source media="(max-width: 768px)" srcset="./assets/S1%20TOPO%20HERO/mobile/BANNER-MOBILE-1080X1440.png.webp" />
       <img src="./assets/S1%20TOPO%20HERO/S1%20TOPO%20HERO-1920x1080.webp" alt="Show de Prêmios Supermercados Mais B" class="sp-hero-img" width="1920" height="1080" fetchpriority="high" />
@@ -298,14 +389,14 @@
       <div class="sp-faq-wrapper">
         <!-- Item 01 (Aberto por padrão) -->
         <div class="sp-faq-item faq-active">
-          <div class="sp-faq-header">
+          <div class="sp-faq-header" id="faq-header-1" role="button" tabindex="0" aria-expanded="true" aria-controls="faq-ans-1">
             <div class="sp-faq-header-left">
               <span class="sp-faq-num">01</span>
               <h3 class="sp-faq-title">Qual o período de participação na promoção?</h3>
             </div>
-            <div class="sp-faq-toggle-icon">+</div>
+            <div class="sp-faq-toggle-icon" aria-hidden="true">+</div>
           </div>
-          <div class="sp-faq-content">
+          <div class="sp-faq-content" id="faq-ans-1" role="region" aria-labelledby="faq-header-1">
             <div class="sp-faq-content-inner">
               <p>A promoção é válida de <strong>02/09/2026</strong> a <strong>29/01/2027</strong>.</p>
             </div>
@@ -314,14 +405,14 @@
 
         <!-- Item 02 -->
         <div class="sp-faq-item">
-          <div class="sp-faq-header">
+          <div class="sp-faq-header" id="faq-header-2" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-ans-2">
             <div class="sp-faq-header-left">
               <span class="sp-faq-num">02</span>
               <h3 class="sp-faq-title">Quem pode participar desta promoção?</h3>
             </div>
-            <div class="sp-faq-toggle-icon">+</div>
+            <div class="sp-faq-toggle-icon" aria-hidden="true">+</div>
           </div>
-          <div class="sp-faq-content">
+          <div class="sp-faq-content" id="faq-ans-2" role="region" aria-labelledby="faq-header-2">
             <div class="sp-faq-content-inner">
               <p>Pessoas físicas, residentes e domiciliadas no Brasil, sem qualquer limite de idade, desde que preenchidos todos os requisitos do regulamento. A participação deverá ser para maiores de 18 anos e em caso de participação para menores de idade deverão ser representados por seus responsáveis legais.</p>
             </div>
@@ -330,14 +421,14 @@
 
         <!-- Item 03 -->
         <div class="sp-faq-item">
-          <div class="sp-faq-header">
+          <div class="sp-faq-header" id="faq-header-3" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-ans-3">
             <div class="sp-faq-header-left">
               <span class="sp-faq-num">03</span>
               <h3 class="sp-faq-title">Como faço para me cadastrar na promoção?</h3>
             </div>
-            <div class="sp-faq-toggle-icon">+</div>
+            <div class="sp-faq-toggle-icon" aria-hidden="true">+</div>
           </div>
-          <div class="sp-faq-content">
+          <div class="sp-faq-content" id="faq-ans-3" role="region" aria-labelledby="faq-header-3">
             <div class="sp-faq-content-inner">
               <p>Os clientes deverão, obrigatoriamente, baixar o aplicativo <strong>"Clube +Fidelidade"</strong> disponível nas plataformas: Android e iOS, em suas devidas lojas de aplicativos ou acessar o site da empresa promotora <a href="https://www.grupomaisbarato.com.br/show-de-premios" target="_blank" rel="noopener noreferrer">www.grupomaisbarato.com.br/show-de-premios</a> e realizar o cadastro completo dos seus dados pessoais.</p>
             </div>
@@ -346,14 +437,14 @@
 
         <!-- Item 04 -->
         <div class="sp-faq-item">
-          <div class="sp-faq-header">
+          <div class="sp-faq-header" id="faq-header-4" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-ans-4">
             <div class="sp-faq-header-left">
               <span class="sp-faq-num">04</span>
               <h3 class="sp-faq-title">Como funciona a mecânica de participação?</h3>
             </div>
-            <div class="sp-faq-toggle-icon">+</div>
+            <div class="sp-faq-toggle-icon" aria-hidden="true">+</div>
           </div>
-          <div class="sp-faq-content">
+          <div class="sp-faq-content" id="faq-ans-4" role="region" aria-labelledby="faq-header-4">
             <div class="sp-faq-content-inner">
               <p>A cada R$ 100,00 (Cem Reais) em compras, você tem direito a um cupom, para isso você deve informar o CPF cadastrado na promoção no caixa onde você está finalizando a sua compra, após isso você deve se dirigir aos totens da promoção, imprimir seus cupons e depositá-los na urna destinada à promoção.</p>
             </div>
@@ -362,14 +453,14 @@
 
         <!-- Item 05 -->
         <div class="sp-faq-item">
-          <div class="sp-faq-header">
+          <div class="sp-faq-header" id="faq-header-5" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-ans-5">
             <div class="sp-faq-header-left">
               <span class="sp-faq-num">05</span>
               <h3 class="sp-faq-title">Como será realizado o sorteio?</h3>
             </div>
-            <div class="sp-faq-toggle-icon">+</div>
+            <div class="sp-faq-toggle-icon" aria-hidden="true">+</div>
           </div>
-          <div class="sp-faq-content">
+          <div class="sp-faq-content" id="faq-ans-5" role="region" aria-labelledby="faq-header-5">
             <div class="sp-faq-content-inner">
               <p>No dia da apuração, todas as urnas das unidades <strong>Tapanã, José Malcher Plaza, Alcindo e Shopping Grão Pará</strong> serão levadas para o local onde será realizada a apuração (frente de loja do supermercado – Unidade Tapanã) que é de livre acesso aos interessados. Os cupons deverão ser depositados nas urnas até as <strong>12:00 horas do dia 29/01/2027</strong>, quando as urnas serão lacradas. Às <strong>18:00 horas do dia 29/01/2027</strong> será retirada manual e aleatoriamente um cupom por sorteio, cujo titular será contemplado com o prêmio do sorteio. Serão <strong>21 (vinte e um) sorteios em sequência</strong>, com os prêmios: <strong>12 (doze) Vales-compras de R$ 2.000,00</strong>, <strong>04 (quatro) TVS Samsung Smart 50"</strong>, <strong>04 (quatro) motos zero km</strong> e <strong>1 (um) carro zero KM</strong>, totalizando 21 prêmios.</p>
             </div>

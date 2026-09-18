@@ -1,0 +1,23 @@
+{
+  "name": "Show de Prêmios Supermercados Mais B",
+  "short_name": "Show de Prêmios +B",
+  "description": "Campanha oficial Show de Prêmios Supermercados Mais B",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0C10",
+  "theme_color": "#C89D42",
+  "icons": [
+    {
+      "src": "./assets/Logos/FavIcon-Supermercados-MaisB-icone).webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/Logos/FavIcon-Supermercados-MaisB-icone).webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

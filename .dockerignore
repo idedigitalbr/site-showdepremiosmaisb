@@ -2,8 +2,10 @@
 .github
 .gitignore
 .dockerignore
+.MD
 Dockerfile
 docker-compose.yml
+nginx.conf
 backup
 ia
 assets-nao-usados
